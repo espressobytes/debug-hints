@@ -5,9 +5,9 @@
  * Copyright © 2016 Magento. All rights reserved.
  * See COPYING.txt for license details.
  */
-namespace TbNet\DebugHints\Model\TemplateEngine\Plugin;
+namespace Espressobytes\DebugHints\Model\TemplateEngine\Plugin;
 
-use TbNet\DebugHints\Model\TemplateEngine\Decorator\DebugHintsFactory;
+use Espressobytes\DebugHints\Model\TemplateEngine\Decorator\DebugHintsFactory;
 use Magento\Framework\View\TemplateEngineFactory;
 use Magento\Framework\View\TemplateEngineInterface;
 /*
