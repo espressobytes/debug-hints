@@ -3,6 +3,7 @@
     <module name="Espressobytes_DebugHints" setup_version="1.0.2">
         <sequence>
             <module name="Magento_Framework"/>
+            <module name="Magento_Config"/>
         </sequence>
     </module>
 </config>
