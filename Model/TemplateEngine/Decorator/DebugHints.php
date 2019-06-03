@@ -15,7 +15,7 @@ class DebugHints implements \Magento\Framework\View\TemplateEngineInterface
 
     private $_subject;
 
-    private $_showBlockHints;
+    private $_showDebugHints;
 
     private $_directoryList;
 
@@ -26,10 +26,10 @@ class DebugHints implements \Magento\Framework\View\TemplateEngineInterface
     public function __construct(
         \Magento\Framework\App\Filesystem\DirectoryList $directoryList,
         \Magento\Framework\View\TemplateEngineInterface $subject,
-        $showBlockHints)
+        $showDebugHints)
     {
         $this->_subject = $subject;
-        $this->_showBlockHints = $showBlockHints;
+        $this->_showDebugHints = $showDebugHints;
         $this->_directoryList = $directoryList;
     }
 
@@ -48,7 +48,10 @@ class DebugHints implements \Magento\Framework\View\TemplateEngineInterface
         $directoryRoot = $this->_directoryList->getRoot();
         $templateFile = str_replace($directoryRoot,"",$templateFile);
 
-        $result = $this->_renderTemplateHints($result, $templateFile, $block);
+        if ($this->_showDebugHints) {
+            $result = $this->_renderTemplateHints($result, $templateFile, $block);
+        }
+        
         return $result;
     }
 

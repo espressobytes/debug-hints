@@ -2,6 +2,7 @@
 
 namespace Espressobytes\DebugHints\Model\TemplateEngine\Plugin;
 
+use Espressobytes\DebugHints\Helper\Config;
 use Espressobytes\DebugHints\Model\TemplateEngine\Decorator\DebugHintsFactory;
 use Magento\Framework\View\TemplateEngineFactory;
 use Magento\Framework\View\TemplateEngineInterface;
@@ -14,6 +15,11 @@ class DebugHints
      */
     protected $debugHintsFactory;
 
+    /**
+     * @var Config 
+     */
+    protected $config;
+    
     /**
      * XPath of configuration of the debug hints
      *
@@ -30,9 +36,12 @@ class DebugHints
      * @param DebugHintsFactory $debugHintsFactory
      */
     public function __construct(
-        DebugHintsFactory $debugHintsFactory
-    ) {
+        DebugHintsFactory $debugHintsFactory,
+        Config $config
+    )
+    {
         $this->debugHintsFactory = $debugHintsFactory;
+        $this->config = $config;
     }
 
     /**
@@ -47,10 +56,11 @@ class DebugHints
     public function afterCreate(
         TemplateEngineFactory $subject,
         TemplateEngineInterface $invocationResult
-    ) {
+    )
+    {
         return $this->debugHintsFactory->create([
             'subject' => $invocationResult,
-            'showBlockHints' => true,
+            'showDebugHints' => (bool)$this->config->isModuleEnabled(),
         ]);
     }
 }

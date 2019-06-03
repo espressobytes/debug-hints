@@ -2,6 +2,7 @@
 
 namespace Espressobytes\DebugHints\Helper;
 
+use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Store\Model\ScopeInterface;
 
 /**
