@@ -1,22 +1,10 @@
 <?php
-/**
- * Plugin for the template engine factory that makes a decision of whether to activate debugging hints or not
- *
- * Copyright © 2016 Magento. All rights reserved.
- * See COPYING.txt for license details.
- */
+
 namespace Espressobytes\DebugHints\Model\TemplateEngine\Plugin;
 
 use Espressobytes\DebugHints\Model\TemplateEngine\Decorator\DebugHintsFactory;
 use Magento\Framework\View\TemplateEngineFactory;
 use Magento\Framework\View\TemplateEngineInterface;
-/*
-use Magento\Framework\App\Config\ScopeConfigInterface;
-use Magento\Framework\View\TemplateEngineFactory;
-use Magento\Framework\View\TemplateEngineInterface;
-use Magento\Store\Model\ScopeInterface;
-use Magento\Store\Model\StoreManagerInterface;
-*/
 
 class DebugHints
 {

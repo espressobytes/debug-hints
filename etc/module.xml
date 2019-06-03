@@ -1,6 +1,9 @@
 <?xml version="1.0"?>
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/Module/etc/module.xsd">
-    <module name="Espressobytes_DebugHints" setup_version="1.0.1">
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="Espressobytes_DebugHints" setup_version="1.0.2">
+        <sequence>
+            <module name="Magento_Framework"/>
+        </sequence>
     </module>
 </config>
 
