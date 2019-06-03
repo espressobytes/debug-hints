@@ -22,6 +22,9 @@ If the module is enabled, comments are integrated in the html-output at the star
 
     php bin/magento cache:clean
 
+### Configuration
 
+- In Admin navigate to: **Stores > Configuration > Espressobytes Modules > Debug Hints**
+- Set Enabled to **Yes**
 
 
