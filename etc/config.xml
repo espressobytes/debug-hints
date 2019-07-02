@@ -4,7 +4,8 @@
     <default>
         <espressobytes_debughints>
             <general>
-                <is_enabled>1</is_enabled>
+                <show_frontend_hints>1</show_frontend_hints>
+                <show_adminhtml_hints>1</show_adminhtml_hints>
             </general>
         </espressobytes_debughints>
     </default>

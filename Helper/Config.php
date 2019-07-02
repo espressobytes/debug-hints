@@ -25,9 +25,17 @@ class Config
     /**
      * @return bool
      */
-    public function isModuleEnabled()
+    public function showFrontendHints()
     {
-        return $this->scopeConfig->getValue('espressobytes_debughints/general/is_enabled', ScopeInterface::SCOPE_STORE);
+        return $this->scopeConfig->getValue('espressobytes_debughints/general/show_frontend_hints', ScopeInterface::SCOPE_STORE);
+    }
+
+    /**
+     * @return bool
+     */
+    public function showAdminhtmlHints()
+    {
+        return $this->scopeConfig->getValue('espressobytes_debughints/general/show_adminhtml_hints', ScopeInterface::SCOPE_STORE);
     }
 
 }

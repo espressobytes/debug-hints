@@ -7,7 +7,7 @@ use Espressobytes\DebugHints\Model\TemplateEngine\Decorator\DebugHintsFactory;
 use Magento\Framework\View\TemplateEngineFactory;
 use Magento\Framework\View\TemplateEngineInterface;
 
-class DebugHints
+class DebugHintsAdminhtml
 {
 
     /**
@@ -19,17 +19,6 @@ class DebugHints
      * @var Config 
      */
     protected $config;
-    
-    /**
-     * XPath of configuration of the debug hints
-     *
-     * Allowed values:
-     *     dev/debug/template_hints_storefront
-     *     dev/debug/template_hints_admin
-     *
-     * @var string
-     */
-    protected $debugHintsPath;
 
     /**
      * DebugHints constructor.
@@ -60,7 +49,7 @@ class DebugHints
     {
         return $this->debugHintsFactory->create([
             'subject' => $invocationResult,
-            'showDebugHints' => (bool)$this->config->isModuleEnabled(),
+            'showDebugHints' => (bool)$this->config->showAdminhtmlHints(),
         ]);
     }
 }
