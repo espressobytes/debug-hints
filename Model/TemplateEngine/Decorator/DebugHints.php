@@ -51,7 +51,7 @@ class DebugHints implements \Magento\Framework\View\TemplateEngineInterface
         if ($this->_showDebugHints) {
             $result = $this->_renderTemplateHints($result, $templateFile, $block);
         }
-        
+
         return $result;
     }
 
@@ -63,9 +63,10 @@ class DebugHints implements \Magento\Framework\View\TemplateEngineInterface
     {
 
         $blockClass = get_class($block);
+        $blockLayoutName = $block->getNameInLayout();
 
-        $beforeHtml = "<!-- Start Template: $templateFile (BlockClass: $blockClass) -->";
-        $afterHtml = "<!-- End Template: $templateFile -->";
+        $beforeHtml = "<!-- Start Block '$blockLayoutName' -- Template: '$templateFile' -- BlockClass: '$blockClass' -->";
+        $afterHtml = "<!-- End Block '$blockLayoutName' -->";
 
         return $beforeHtml . $blockHtml . $afterHtml;
 
