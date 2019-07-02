@@ -30,4 +30,4 @@ If the module is enabled, comments are integrated in the html-output at the star
 
 ### Changelog
 
-
+v1.1.1: Support for blocks and templates in Adminhtml, show layout-names of blocks
