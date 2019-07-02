@@ -25,6 +25,9 @@ If the module is enabled, comments are integrated in the html-output at the star
 ### Configuration
 
 - In Admin navigate to: **Stores > Configuration > Espressobytes Modules > Debug Hints**
-- Set Enabled to **Yes**
+- Set **Show Frontend Hints** to **Yes**, if you want to show template names in frontend
+- Set **Show Adminhtml Hints** to **Yes**, if you want to show template names in adminhtml
+
+### Changelog
 
 
